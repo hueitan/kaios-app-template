@@ -1,4 +1,4 @@
-import 'preact/debug'
+// import 'preact/debug'
 import { h, render } from 'preact'
 import { App } from 'views'
 
