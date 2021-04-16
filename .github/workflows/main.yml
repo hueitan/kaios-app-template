@@ -1,5 +1,3 @@
-# This is a basic workflow to help you get started with Actions
-
 name: github pages
 
 on:
@@ -18,6 +16,7 @@ jobs:
           npm run build
           mkdir ./public
           mv ./index.html ./public/
+          mv ./sim.html ./public/
           mv ./dist ./public/dist
 
       - name: GitHub Pages action
