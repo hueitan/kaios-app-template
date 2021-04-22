@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
@@ -41,17 +40,16 @@ module.exports = {
           options: {
             plugins: [
               [
-                "@babel/plugin-transform-react-jsx",
+                '@babel/plugin-transform-react-jsx',
                 {
-                  pragma: "h", // default pragma is React.createElement
-                  pragmaFrag: "Fragment", // default is React.Fragment
-                  throwIfNamespace: false // defaults to true
+                  runtime: 'automatic', // defaults to classic (classic == createElement calls)
+                  importSource: 'preact' // NOT preact/jsx-runtime
                 }
               ],
               [
-                "module-resolver",
+                'module-resolver',
                 {
-                  root: ["./src"],
+                  root: ['./src'],
                   alias: {
                     views: './src/views',
                     components: './src/components',
@@ -62,13 +60,13 @@ module.exports = {
               ]
             ],
             presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    targets: "firefox 37"
-                  }
-                ]
+              [
+                '@babel/preset-env',
+                {
+                  targets: 'firefox 37'
+                }
               ]
+            ]
           }
         }
       },

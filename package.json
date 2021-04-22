@@ -16,7 +16,7 @@
   },
   "homepage": "",
   "devDependencies": {
-    "@babel/core": "^7.11.6",
+    "@babel/core": "^7.13.16",
     "@babel/plugin-transform-react-jsx": "^7.10.4",
     "@babel/preset-env": "^7.11.5",
     "b2g-cli-tool": "github:fabricedesre/b2gclitool",
@@ -45,8 +45,8 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-    "history": "^4.10.1",
-    "preact": "~10.4.1",
+    "history": "^5.0.0",
+    "preact": "~10.5.13",
     "preact-router": "^3.2.1"
   }
 }

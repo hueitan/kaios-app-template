@@ -16,7 +16,7 @@ const SinglePopup = ({ component, props, options, style }) => {
 
 export const Popup = ({ popups }) => {
   if (popups.length === 0) {
-    return ''
+    return <div class='popup' />
   }
   let zIndex = 100
   const nextZIndex = () => {
