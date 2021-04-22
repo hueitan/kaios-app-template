@@ -1,5 +1,4 @@
 const path = require('path')
-const webpack = require('webpack')
 const StylelintPlugin = require('stylelint-webpack-plugin')
 
 module.exports = {
@@ -7,7 +6,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist')
   },
   devServer: {
     publicPath: '/dist/',
@@ -41,17 +40,17 @@ module.exports = {
           options: {
             plugins: [
               [
-                "@babel/plugin-transform-react-jsx",
+                '@babel/plugin-transform-react-jsx',
                 {
-                  pragma: "h", // default pragma is React.createElement
-                  pragmaFrag: "Fragment", // default is React.Fragment
+                  pragma: 'h', // default pragma is React.createElement
+                  pragmaFrag: 'Fragment', // default is React.Fragment
                   throwIfNamespace: false // defaults to true
                 }
               ],
               [
-                "module-resolver",
+                'module-resolver',
                 {
-                  root: ["./src"],
+                  root: ['./src'],
                   alias: {
                     views: './src/views',
                     components: './src/components',
@@ -62,13 +61,13 @@ module.exports = {
               ]
             ],
             presets: [
-                [
-                  "@babel/preset-env",
-                  {
-                    targets: "firefox 37"
-                  }
-                ]
+              [
+                '@babel/preset-env',
+                {
+                  targets: 'firefox 37'
+                }
               ]
+            ]
           }
         }
       },
@@ -77,9 +76,9 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-          { loader: 'less-loader', options: { sourceMap: true } },
+          { loader: 'less-loader', options: { sourceMap: true } }
         ]
       }
     ]
   }
-};
+}
