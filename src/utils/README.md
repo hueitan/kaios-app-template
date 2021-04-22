@@ -3,7 +3,7 @@
 
 ```js
 import { alert } from 'utils'
-alert({ title: 'Alert', message: 'This is an alert popup' })
+alert({ title: 'Alert', message: 'This is an alert popup', mode: 'auto; })
 ```
 
 ## Confirm
@@ -11,5 +11,5 @@ alert({ title: 'Alert', message: 'This is an alert popup' })
 
 ```js
 import { confirm } from 'utils'
-confirm({ title: 'Confirm', message: 'This is a confirm popup' })
+confirm({ title: 'Confirm', message: 'This is a confirm popup', mode: 'fullscreen' })
 ```

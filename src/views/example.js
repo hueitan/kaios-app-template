@@ -12,7 +12,7 @@ export const Example = () => {
   const items = [
     { title: 'Confirm', description: 'Show Confirm Component', action: () => confirm({ title: 'Confirm', message: 'This is a confirm popup' }) },
     { title: 'Alert', description: 'Show Alert Component', action: () => alert({ title: 'Alert', message: 'This is an alert popup' }) },
-    { title: 'Item 3' },
+    { title: 'Alert in Fullscreen', description: 'Show Alert Component in Fullscreen mode', action: () => alert({ title: 'Alert', message: 'This is an alert popup', mode: 'fullscreen' }) },
     { title: 'Item 4' },
     { title: 'Item 5' },
     { title: 'Item 6' }
